@@ -1,0 +1,38 @@
+<html>
+<head>
+<LINK href="woodles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script src="woodles.js"></script>
+</head>
+
+ 
+<body>
+<div id="woodles">
+	<div id="scoreboard">
+		<div id="player1" class="active">Player1: 0</div>
+		<div id="player2">Player2: 0</div>
+	</div>
+	<div id="board">
+	<br/>
+	</div>
+	<div id="tilesdisplay">
+	Tiles
+	</div><br/>
+	<div id="control">
+		<div id="play" class="button">Play</div>
+		<div id="swap" class="button">Swap</div>
+		<div id="pass" class="button">Pass</div>
+		<div id="recall" class="button">Recall</div>
+	</div>
+	<div id="text"></div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('#woodles').woodles({});
+});
+</script>
+
+</body>
+</html>

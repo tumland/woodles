@@ -1,0 +1,220 @@
+#woodles div{
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#woodles{
+	border: 1px solid #000;
+	width:100%;
+	height:580px;
+	text-align: center;
+	font-size: 10px;
+}
+#woodles #scoreboard{
+	border: 1px solid #000;
+	height: 22px;
+	border-radius:4px;
+	margin: 1px;
+	font-size: 20px;
+}
+#woodles #player1{
+float:left;
+margin:1px;
+margin-left: 5px;
+}
+#woodles .active#player1{
+	font-weight: bold;
+}
+#woodles #player2{
+margin: 1;
+margin-right: 5px;
+float: right;
+}
+#woodles .active#player2{
+	font-weight: bold;
+}
+
+#woodles #board{
+	border: 1px solid #000;
+	height:465px;
+	margin: auto;
+	border-radius:4px;
+}
+#woodles #tilesdisplay{
+	border: 1px solid #000;
+	height: 28px;
+	border-radius:4px;
+	margin: auto;
+	padding: 5px;
+	display:inline-block;
+	vertical-align:top;
+}
+#woodles #control{
+	border: 1px solid #000;
+	height: 28px;
+	border-radius:4px;
+	margin: auto;
+	padding: 5px;
+	//float: left;
+	//position: relative;
+	//left: 50%;
+	display:inline-block;
+	vertical-align:top;
+}
+#woodles .button{
+	border: 1px solid #000;
+	height: 26px;
+	width: 26px;
+	float: left;
+	border-radius:4px;
+	margin: 1px;
+	display:inline-block;
+	vertical-align:top;
+}
+#woodles .tile{
+z-index: 2;
+top: 0px;
+left: 0px;
+position: relative;
+width: 26px;
+height: 26px;
+border: 1px solid #000;
+//float: left;
+border-radius:5px;
+font-face:helvetica;
+font-size: 12px;
+text-align:center;
+vertical-align:middle;
+//margin:0.5px;
+background: -moz-linear-gradient(left center, rgb(255,254,173), rgb(255,254,173), rgb(250,235,215));
+background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(255,254,173)),
+                               color-stop(0.50, rgb(255,254,173)),
+                               color-stop(1, rgb(250,235,215)));
+}
+#woodles .points{
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	width: 8px;
+	font-size: 8px;
+	left: 16px;
+	right: 0px;
+	bottom: 0px;
+	position: relative;
+}
+
+#woodles .tile:hover{
+opacity:0.6;
+filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+#woodles .tile.swap{
+border: 2px dashed #000;
+
+}
+#woodles .cell .display{
+width: 26px;
+height: 26px;
+border: 2px solid #797979;
+float: left;
+//clear: both;
+//display: inline;
+border-radius:5px;
+font-face:helvetica;
+font-size:10;
+text-align:center;
+vertical-align:middle;
+margin:0.5px;
+background-color:white;
+}
+#woodles .cell{
+width: 26px;
+height: 26px;
+border: 2px solid #797979;
+float: left;
+//clear: both;
+//display: inline;
+border-radius:5px;
+font-face:helvetica;
+font-size:10;
+text-align:center;
+vertical-align:middle;
+margin:0.5px;
+background-color:white;
+}
+
+
+#woodles .cell .header{
+visibility: hidden;
+z-index: 1;
+height: 12px;
+width: 26px;
+position: relative;
+top: 0px;
+left: 0px;
+color: #fff;
+text-shadow: #000 0 1px;
+box-shadow: 5px;
+background: -moz-linear-gradient(left center, rgb(79,79,79), rgb(120,120,120), rgb(80,80,80));
+background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(79,79,79)),
+                               color-stop(0.50, rgb(120,120,120)),
+                               color-stop(1, rgb(80,80,80)));
+border-bottom: 1px solid #ddd;
+opacity:0.6;
+filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+#woodles .cell.dw{
+background: -moz-linear-gradient(left center, rgb(200,0,0), rgb(227,0,0), rgb(255,0,0));
+background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(200,0,0)),
+                               color-stop(0.50, rgb(227,0,0)),
+                               color-stop(1, rgb(255,0,0)));
+}
+#woodles .cell.dw .header{
+	visibility: visible;
+}
+
+#woodles .cell.tw{
+background: -moz-linear-gradient(left center, rgb(200,200,0), rgb(227,227,0), rgb(255,255,0));
+background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(200,200,0)),
+                               color-stop(0.50, rgb(227,227,0)),
+                               color-stop(1, rgb(255,255,0)));
+}
+#woodles .cell.tw .header{
+	visibility: visible;
+}
+#woodles .cell.dl{
+background: -moz-linear-gradient(left center, rgb(0,0,200), rgb(0,0,227), rgb(0,0,255));
+background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(0,0,200)),
+                               color-stop(0.50, rgb(0,0,227)),
+                               color-stop(1, rgb(0,0,255)));
+}
+#woodles .cell.dl .header{
+	visibility: visible;
+}
+
+#woodles .cell.tl{
+background: -moz-linear-gradient(left center, rgb(0,200,0), rgb(0,227,0), rgb(0,255,0));
+background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(0,200,0)),
+                               color-stop(0.50, rgb(0,227,0)),
+                               color-stop(1, rgb(0,255,0)));
+}
+#woodles .cell.tl .header{
+	visibility: visible;
+}
+
+#woodles .cell.star{
+background-color:purple;
+}
+#woodles .cell.star .header{
+	visibility: visible;
+}
+#woodles .boardrow{
+	display:inline-block;
+	//vertical-align:top;
+}
